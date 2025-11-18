@@ -1,20 +1,16 @@
-# Power Saver — Circuit Schematic
+# Power Saver Pro Mastering Ultra Efficient Microcontroller — Circuit Notes
 
-- Course: Power Saver Pro: Mastering Ultra-Efficient Microcontroller
-- Author: Ashraf S A AlMadhoun
-- Link: https://www.udemy.com/course/auto-power-off-circuit-for-microcontrollers-save-power/?couponCode=JULYMAXDICOUNT
+| Signal | Suggested Pin | Notes |
+| --- | --- | --- |
+| Sensor Input | A0 / GPIO | Adjust according to the Embedded Systems board you own. |
+| Actuator Output | D9 / PWM Pin | Use a transistor/driver for high-current loads. |
+| Status LED | D13 or onboard LED | Mirrors the runtime state for quick debugging. |
 
-## Connections
+## Wiring Checklist
 
-- Microcontroller with MOSFET-controlled power latch; button to wake; timer to cut power.
+1. Power rails first (5V / 3.3V and GND).
+2. Route sensor outputs to the analog/digital pin noted above.
+3. Add current-limiting resistors where appropriate.
+4. Double-check common grounds between modules and the development board.
 
-## Diagram (ASCII)
-
-```
-BTN -> Latch -> MCU VCC
-MCU GPIO -> MOSFET -> Power OFF
-```
-
-## Purchase With Discount
-
-Get a discounted price and master low-power design — use the course link above.
+Refer to the course lecture for the exact schematic; reuse these notes as a quick reference.
